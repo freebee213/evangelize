@@ -1,0 +1,30 @@
+<div class="container">
+  <h3 class="my-3">Visited Houses</h3>
+  <table class="table table-striped table-bordered">
+    <thead class="table-dark">
+      <tr>
+        <th>#</th>
+        <th>Street</th>
+        <th>Latitude</th>
+        <th>Longitude</th>
+        <th>Visited At</th>
+        <th>Actions</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let house of houses; let i = index">
+        <td>{{ i + 1 }}</td>
+        <td>
+          <input class="form-control" [(ngModel)]="house.street" (blur)="updateHouse(house)" />
+        </td>
+        <td>{{ house.lat.toFixed(5) }}</td>
+        <td>{{ house.lng.toFixed(5) }}</td>
+        <td>{{ house.visitedAt | date:'short' }}</td>
+        <td>
+          <button class="btn btn-primary btn-sm me-1" (click)="jumpToMarker(house)">Go to Map</button>
+          <button class="btn btn-danger btn-sm" (click)="deleteMarker(house.id)">Delete</button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
