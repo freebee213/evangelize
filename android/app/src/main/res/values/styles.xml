@@ -16,7 +16,12 @@
     </style>
 
 
-    <style name="AppTheme.NoActionBarLaunch" parent="Theme.SplashScreen">
-        <item name="android:background">@drawable/splash</item>
+    <style name="AppTheme.NoActionBarLaunch" parent="Theme.AppCompat.Light.NoActionBar">
+      <!-- Splash background -->
+      <item name="android:windowBackground">@drawable/splash</item>
+      <!-- Make status bar translucent -->
+      <item name="android:statusBarColor">@android:color/transparent</item>
+      <!-- Let layout adjust for status bar -->
+      <item name="android:windowFullscreen">false</item>
     </style>
 </resources>

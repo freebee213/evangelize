@@ -1,18 +1,21 @@
-<nav class="navbar navbar-expand-lg navbar-dark bg-primary">
-  <div class="container-fluid">
-    <a class="navbar-brand" routerLink="/">Neighborhood Tracker</a>
-    <div class="collapse navbar-collapse">
-      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-        <li class="nav-item">
-          <a class="nav-link" routerLink="/map">Map View</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" routerLink="/list">List View</a>
-        </li>
-      </ul>
+<div class="container-fluid bg-primary pt-5">
+  <div class="row justify-content-around me-auto mb-2 mb-lg-0">
+    <div class="col-auto">
+      <div class="d-flex justify-content-center mb-2">
+        <button class="btn btn-secondary" routerLink="/map">
+          <i class="bi bi-map"></i> Map View
+        </button>
+      </div>
+    </div>
+    <div class="col-auto">
+      <div class="d-flex justify-content-center mb-2">
+        <button class="btn btn-secondary" routerLink="/list">
+          <i class="bi bi-list"></i> List View
+        </button>
+      </div>
     </div>
   </div>
-</nav>
+</div>
 <div class="container-fluid mt-3">
   <router-outlet></router-outlet>
 </div>

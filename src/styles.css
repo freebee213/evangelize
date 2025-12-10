@@ -1,0 +1,11 @@
+body, html, #app-root {
+    padding-top: env(safe-area-inset-top); /* iOS + Android notch support */
+    box-sizing: border-box;
+}
+
+/* Add padding for Android status bar */
+#map {
+  height: 100vh; /* full viewport height */
+  padding-top: env(safe-area-inset-top);
+  box-sizing: border-box;
+}
